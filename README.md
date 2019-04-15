@@ -1,1 +1,1 @@
-# Site de vente de chaussur pour malvoyant
+# Site de vente de chaussure pour malvoyant
