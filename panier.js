@@ -56,14 +56,14 @@ function addToCartClicked(event) {
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText //faire afficher le prix de l'article dans le panier
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src //faire afficher l'image de l'article dans le panier
     var id = shopItem.dataset.itemId
-    var taille = shopItem.getElementsByClassName("shop-item-size")[0].firstElementChild.value;//on récupère le premier element enfant qui est le noed opt puis on récupe la value
-    if (taille!=="0") { //on vérifie que la pointure est est selectionné
+    var taille = shopItem.getElementsByClassName("shop-item-size")[0].firstElementChild.value;//on récupère le premier element enfant qui est le noeud option puis on récupère la valeur
+    if (taille!=="0") { //on vérifie que la pointure est selectionnée
       console.log(taille);
       addItemToCart(title, price, imageSrc, id, taille);
       updateCartTotal();
     }
     else {
-      alert("FDP la pointure !!!!"); //a changer
+      alert("Veuillez sélectionner une pointure"); //message à l'utilisateur
     }
 }
 
