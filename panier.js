@@ -56,11 +56,18 @@ function addToCartClicked(event) {
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText //faire afficher le prix de l'article dans le panier
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src //faire afficher l'image de l'article dans le panier
     var id = shopItem.dataset.itemId
-    addItemToCart(title, price, imageSrc, id)
-    updateCartTotal()
+    var taille = shopItem.getElementsByClassName("shop-item-size")[0].firstElementChild.value;//on récupère le premier element enfant qui est le noed opt puis on récupe la value
+    if (taille!=="0") { //on vérifie que la pointure est est selectionné
+      console.log(taille);
+      addItemToCart(title, price, imageSrc, id, taille);
+      updateCartTotal();
+    }
+    else {
+      alert("FDP la pointure !!!!"); //a changer
+    }
 }
 
-function addItemToCart(title, price, imageSrc, id) { //fonction ajouter au panier
+function addItemToCart(title, price, imageSrc, id, taille) { //fonction ajouter au panier
     var cartRow = document.createElement('div') //lié à la page html
     cartRow.classList.add('cart-row') //crée une liste avec tout ce qui est ajouté au panier
     cartRow.dataset.itemId = id
@@ -77,6 +84,9 @@ function addItemToCart(title, price, imageSrc, id) { //fonction ajouter au panie
         <div class="cart-item cart-column">
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
             <span class="cart-item-title">${title}</span>
+        </div>
+        <div class="cart-size cart-column"">
+            <span class="cart-item-size">${taille}</span>
         </div>
         <span class="cart-price cart-column">${price}</span>
         <div class="cart-quantity cart-column">
