@@ -58,7 +58,6 @@ function addToCartClicked(event) {
     var id = shopItem.dataset.itemId
     var taille = shopItem.getElementsByClassName("shop-item-size")[0].firstElementChild.value;//on récupère le premier element enfant qui est le noeud option puis on récupère la valeur
     if (taille!=="0") { //on vérifie que la pointure est selectionnée
-      console.log(taille);
       addItemToCart(title, price, imageSrc, id, taille);
       updateCartTotal();
     }
