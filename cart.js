@@ -26,55 +26,13 @@ function ready() {
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked) //on crée un bouton pour le bouton ACHETER, lié à une fonction (l.72)
 }
 
-var stripeHandler = StripeCheckout.configure({
-    key: stripePublicKey,
-    locale: 'en',
-    token: function(token) {
-        var items = []
-        var cartItemContainer = document.getElementsByClassName('cart-items')[0]
-        var cartRows = cartItemContainer.getElementsByClassName('cart-row')
-        for (var i = 0; i < cartRows.length; i++) {
-            var cartRow = cartRows[i]
-            var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
-            var quantity = quantityElement.value
-            var id = cartRow.dataset.itemId
-            items.push({
-                id: id,
-                quantity: quantity
-            })
-        }
-
-        fetch('/purchase', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                stripeTokenId: token.id,
-                items: items
-            })
-        }).then(function(res) {
-            return res.json()
-        }).then(function(data) {
-            alert(data.message)
-            var cartItems = document.getElementsByClassName('cart-items')[0]
-            while (cartItems.hasChildNodes()) {
-                cartItems.removeChild(cartItems.firstChild)
-            }
-            updateCartTotal()
-        }).catch(function(error) {
-            console.error(error)
-        })
-    }
-})
-
 function purchaseClicked() {
-    var priceElement = document.getElementsByClassName('cart-total-price')[0]
-    var price = parseFloat(priceElement.innerText.replace('$', '')) * 100
-    stripeHandler.open({
-        amount: price
-    })
+  alert('Thank you for you purchase !')
+  var cartItems = document.getElementsByClassName('cart-items')[0]
+  while (cartItems.hasChildNodes()) {
+    cartItems.removeChild(cartItems.firstChild)
+  }
+  updateCartTotal()
 }
 
 function supprimerCartItem(event) { //fonction du bouton supprimer
@@ -98,11 +56,17 @@ function addToCartClicked(event) {
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText //faire afficher le prix de l'article dans le panier
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src //faire afficher l'image de l'article dans le panier
     var id = shopItem.dataset.itemId
-    addItemToCart(title, price, imageSrc, id)
-    updateCartTotal()
+    var taille = shopItem.getElementsByClassName("shop-item-size")[0].firstElementChild.value;//on récupère le premier element enfant qui est le noeud option puis on récupère la valeur
+    if (taille!=="0") { //on vérifie que la pointure est selectionnée
+      addItemToCart(title, price, imageSrc, id, taille);
+      updateCartTotal();
+    }
+    else {
+      alert("Please select a size"); //message à l'utilisateur
+    }
 }
 
-function addItemToCart(title, price, imageSrc, id) { //fonction ajouter au panier
+function addItemToCart(title, price, imageSrc, id, taille) { //fonction ajouter au panier
     var cartRow = document.createElement('div') //lié à la page html
     cartRow.classList.add('cart-row') //crée une liste avec tout ce qui est ajouté au panier
     cartRow.dataset.itemId = id
@@ -110,7 +74,7 @@ function addItemToCart(title, price, imageSrc, id) { //fonction ajouter au panie
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title') //on veut faire afficher le nom de l'article
     for (var i = 0; i < cartItemNames.length; i++) {
         if (cartItemNames[i].innerText == title) { //on vérifie si l'article n'est pas déjà dans le panier donc si l'article que l'on rajoute a le même nom qu'un article déjà placé dans le panier
-            alert('Ce produit a déjà été ajouté au panier.') // on fait afficher un message
+            alert('You have already added this product to the cart.') // on fait afficher un message
             return
         }
     } //on veut que chaque article qui se rajoute au panier, et pa seulement le premier, se rajoute en dessous du premier article ajouté
@@ -119,6 +83,9 @@ function addItemToCart(title, price, imageSrc, id) { //fonction ajouter au panie
         <div class="cart-item cart-column">
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
             <span class="cart-item-title">${title}</span>
+        </div>
+        <div class="cart-size cart-column"">
+            <span class="cart-item-size">${taille}</span>
         </div>
         <span class="cart-price cart-column">${price}</span>
         <div class="cart-quantity cart-column">
@@ -145,5 +112,5 @@ function updateCartTotal() { //on va vouloir prendre en compte toutes les variab
         total = total + (price * quantity) //calcul pour obtenir le total
     }
     total = Math.round(total * 100) / 100 //obtenir un résultat arrondi
-    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total //permet de faire afficher le résultat du calcul
+  document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total  //permet de faire afficher le résultat du calcul
 }

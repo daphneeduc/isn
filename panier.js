@@ -62,7 +62,7 @@ function addToCartClicked(event) {
       updateCartTotal();
     }
     else {
-      alert("Veuillez sélectionner une pointure"); //message à l'utilisateur
+      alert("Veuillez sélectionner une taille"); //message à l'utilisateur
     }
 }
 

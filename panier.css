@@ -17,6 +17,13 @@ body {
   text-align: justify;
 
 }
+.imagehaut {
+   top:10px;
+   right:10px;
+   background-position: right bottom;
+   position: absolute;
+
+}
 a {
   text-decoration: none;
 }
