@@ -178,15 +178,15 @@ h1 {
     width: 35%;
 }
 
-.cart-item-title {
+..cart-item-title {
     color: #333;
     font-family: "Merriweather", serif;
     margin-left: .5em;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .cart-item-image {
-    width: 75px;
+    width: 100px;
     height: auto;
     border-radius: 10px;
 }

@@ -5,10 +5,10 @@ if (document.readyState == 'loading') {
 }
 
 function ready() {
-    var supprimerCartItemButtons = document.getElementsByClassName('btn-danger') //création d'un bouton pour supprimer chaque produit du panier
-    for (var i = 0; i < supprimerCartItemButtons.length; i++) { //permet de faire un bouton pour tous les produits du panier
-        var button = supprimerCartItemButtons[i]
-        button.addEventListener('click', supprimerCartItem) //permet qu'à chaque click sur le bouton l'action supprimer s'éxécute
+    var deleteCartItemButtons = document.getElementsByClassName('btn-danger') //création d'un bouton pour supprimer chaque produit du panier
+    for (var i = 0; i < deleteCartItemButtons.length; i++) { //permet de faire un bouton pour tous les produits du panier
+        var button = deleteCartItemButtons[i]
+        button.addEventListener('click', deleteCartItem) //permet qu'à chaque click sur le bouton l'action supprimer s'éxécute
     } //"addEventListener"est lié à une fonction et va exécuter la fonction l.80
 
     var quantityInputs = document.getElementsByClassName('cart-quantity-input') //on veut que le prix en fonction de la quantité s'actualise dans le panier
@@ -35,7 +35,7 @@ function purchaseClicked() {
   updateCartTotal()
 }
 
-function supprimerCartItem(event) { //fonction du bouton supprimer
+function deleteCartItem(event) { //fonction du bouton supprimer
     var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove() //permet de supprimer tout l'element "parent", c'est à dire toute la division
     updateCartTotal() // fonction qui permet d'actualiser le panier une fois la suppression effectuée voir l.133
@@ -90,11 +90,11 @@ function addItemToCart(title, price, imageSrc, id, taille) { //fonction ajouter 
         <span class="cart-price cart-column">${price}</span>
         <div class="cart-quantity cart-column">
             <input class="cart-quantity-input" type="number" value="1">
-            <button class="btn btn-danger" type="button">SUPPRIMER</button>
+            <button class="btn btn-danger" type="button">  DELETE   </button>
         </div>`
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
-    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', supprimerCartItem) //sans mettre ce code, le bouton "supprimer" ne marche pas donc de la même manière que l.11
+    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', deleteCartItem) //sans mettre ce code, le bouton "supprimer" ne marche pas donc de la même manière que l.11
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged) //faire afficher la quantité pour chaque article même principe que l.17
 }
 
