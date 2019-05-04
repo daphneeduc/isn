@@ -3,25 +3,25 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
 
 
-@font-face {
+@font-face { /*permet de définir les polices d'écriture à utiliser pour afficher les pages web*/
     font-family: "Merriweather";
 }
 
-body {
-  background-color: white ;
-  font-family: "Open sans", sans-serif;
-  padding: 25px 25px;
-  font-size: 20px;
-  margin: 0;
-  color: #666666;
-  text-align: justify;
+body { /*On définit les carctéristiques de tout ce qui va être contenu dans le "corps" du code*/
+  background-color: white ; /*couleur de fond*/
+  font-family: "Open sans", sans-serif; /*définit la police*/
+  padding: 25px 25px; /*définit les écarts de remplissage sur  les quatres côtés d'un élement*/
+  font-size: 20px; /*taille de la police*/
+  margin: 0; /*définit la taille des marges sur les quatres côtés de l'élément*/
+  color: #666666; /*couleur CSS*/
+  text-align: justify; /*permet de justifier la partie texte*/
 
 }
-.imagehaut {
-   top:10px;
-   right:10px;
-   background-position: right bottom;
-   position: absolute;
+.imagehaut { /*élément pour le logo de traduction*/
+   top:10px; /*écart entre le logo et le haut de la page*/
+   right:10px; /*écart entre le logo et le côté droit de la page*/
+   background-position: right bottom; /*plaer le logo en haut à droite*/
+   position: absolute; /*définit la façon dot un élément est positionné dans un document*/
 
 }
 a {
@@ -34,13 +34,13 @@ nav {
 }
 
 nav img {
-  width: 180px;
+  width: 180px; /*largeur*/
   padding: 0px auto;
 }
 
 nav span {
-  font-size: 16px;
-  font-weight: 100;
+  font-size: 16px; /*taille du texte*/
+  font-weight: 100; /*permet de définir la "graisse" utilisée pour le texte*/
   letter-spacing: 1px;
   margin: 10px 0px;
 }
@@ -76,18 +76,18 @@ h1 {
     color: white;
     background-color: #ff6f6f;
     border: none;
-    padding: 0 2.75em;
+    padding: 0 2.75em; /*donne la taille et permet d'avoir une valeur proportionelle à la taille des caractères utilisés dans la page*/
     margin: 40px auto 80px auto;
     border-radius: .7em; /* bords du bouton plus ou moins arrondis */
     font-weight: bold;
     font-size : 18px;
 }
 
-.btn-primary:hover {
+.btn-primary:hover { /*couleur du bouton quand on passe la souris dessus*/
     background-color: #666666;
 }
 
-.btn-danger {
+.btn-danger { /*caractéristiques du bouton "supprimer"*/
     color: white;
     background-color: #EB5757;
     border: none;

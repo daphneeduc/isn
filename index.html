@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="panier.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="panier.css"> <!-- Fait le lien avec la page de style -->
+    <meta charset="utf-8"> <!-- encodage -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Gère l'affichage de la page sur un appareil-->
     <script src="panier.js"></script>
     <center><a href="accueil.html"><img src="logo2.jpg" alt= "logo" width="550"></a></center>
+    <!-- Afficher le logo et faire avec lien retour ) l'accueil -->
     <!-- Affiche le nom de la page dans l'onglet -->
     <title>JDA Shoes E-SHOP | Boutique</title>
 </head>
   <body>
-    <div class="imagehaut">
+    <div class="imagehaut">   <!-- Logo pour changer la lange avec un lien à la page traduite -->
       <a href="cart.html"><img src="anglais.jpg" alt="drapeau Anglais" width="45"></a>
     </div>
-    <center><nav>
+    <center><nav>  <!-- Liste de toutes les autres pages -->
       <span><a href="accueil.html">ACCUEIL |</a></span>
       <span><a href="nos_produits.html">NOS PRODUITS |</a></span>
       <span><a href="index.html">NOTRE BOUTIQUE |</a></span>
@@ -21,16 +22,16 @@
       </nav></center>
     <br>
     <br>
-    <section class="container content-section">
+    <section class="container content-section">  <!-- On crée une divison que l'on utilisera dans pour le CSS et pour oganiser le code -->
         <h2 class="section-header">NOTRE BOUTIQUE</h2>
             <div class="shop-items">
                 <div class="shop-item">
                     <span class="shop-item-title">Chaussures pour malvoyants blanches</span>
-                    <img class="shop-item-image" src="chaussureblanche.jpg">
+                    <img class="shop-item-image" src="chaussureblanche.jpg">  <!-- Insertion de l'image de l'article -->
                     <div class="shop-item-details">
                       <span class="shop-item-price">85.99 €</span>
                         <div class="shop-item-size">
-                          <select id="shop-item-size">
+                          <select id="shop-item-size"> <!-- Menu déroulant pour choisir la pointure -->
                             <option value="0">Taille</option>
                             <option value="36">36</option>
                             <option value="37">37</option>
@@ -161,7 +162,7 @@
 </section>
 <section class="container content-section">
 <h2 class="section-header">MON PANIER</h2>
-<div class="cart-row">
+<div class="cart-row">   <!-- On crée les noms des différentes colones du panier -->
     <span class="cart-item cart-header cart-column">PRODUITS</span>
     <span class="cart-size cart-header cart-column">TAILLE</span>
     <span class="cart-price cart-header cart-column">PRIX</span>
@@ -186,7 +187,7 @@
     <br>
     <br>
     <br>
-    <div id='contact'>
+    <div id='contact'><!-- Division pour la partie "contact" -->
     </div>
     <center><p><strong>Contactez-nous</strong></p></center>
     <center><p><strong>email</strong>: jdashoes.contact@gmail.com |
