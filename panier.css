@@ -76,7 +76,8 @@ h1 {
     color: white;
     background-color: #ff6f6f;
     border: none;
-    padding: 0 2.75em; /*donne la taille et permet d'avoir une valeur proportionelle à la taille des caractères utilisés dans la page*/
+    padding: 0 2.75em; 
+    /*donne la taille et permet d'avoir une valeur proportionelle à la taille des caractères utilisés dans la page*/
     margin: 40px auto 80px auto;
     border-radius: .7em; /* bords du bouton plus ou moins arrondis */
     font-weight: bold;
