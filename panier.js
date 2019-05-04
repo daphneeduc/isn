@@ -53,7 +53,7 @@ function supprimerCartItem(event) { //fonction du bouton supprimer
 function quantityChanged(event) { //fonction pour la quantité
     var input = event.target
     if (isNaN(input.value) || input.value <= 0) { 
-        //on veut regarder si la valeur de la quantité est correcte, si c'est bien un nombre et on vérifie que ce nombre est positif
+  //on veut regarder si la valeur de la quantité est correcte, si c'est bien un nombre et on vérifie que ce nombre est positif
         input.value = 1 //valeur minimale pour la quantité et si l'utilisateur ne rentre pas un nombre, la quantité sera 1
     }
     updateCartTotal() // fonction qui permet d'actualiser le panier une fois la suppression effectuée voir l.117
@@ -88,11 +88,12 @@ function addItemToCart(title, price, imageSrc, id, taille) { //fonction ajouter 
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title') //on veut faire afficher le nom de l'article
     for (var i = 0; i < cartItemNames.length; i++) {
         if (cartItemNames[i].innerText == title) { 
-            //on vérifie si l'article n'est pas déjà dans le panier donc si l'article que l'on rajoute a le même nom qu'un article déjà placé dans le panier
+    //on vérifie si l'article n'est pas déjà dans le panier donc si l'article que l'on rajoute a le même nom qu'un article du panier
             alert('Ce produit a déjà été ajouté au panier.') // on fait afficher un message
             return
         }
-    } //on veut que chaque article qui se rajoute au panier,pas seulement le premier, se rajoute en dessous du premier article ajouté
+    } 
+ //on veut que chaque article qui se rajoute au panier,pas seulement le premier, se rajoute en dessous du premier article ajouté
   //on prend en compte tous les élements que l'on souhaite afficher :
     var cartRowContents = `
         <div class="cart-item cart-column">
