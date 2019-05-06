@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/*CSS Document*/
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@font-face {
+  font-family: "Merriweather";
+}
+
+
+body {
+  margin:10px;
+  background: url(blind.jpg) no-repeat center fixed;/*ne pas reproduire l'image plusieurs fois et la centrer*/
+  -webkit-background-size:cover; /*permet d'être compatible sur safari, chrome et mozilla afin de pouvoir adapter la taille de l'image en fonction de la taille de la fenêtre*/
+  -moz-background-size:cover;) }
+h1 {color:#222;margin:0;padding:0;}
+h3 {color: #e2e2e2;}
+p {color: #e2e2e2;margin:0;padding:0;}
+/*header*/
+
+#conteneur { /*le # est utilisé pour symboliser le ID*/
+  width: 980px; /*correspond à la largeur du bloc */
+  background-color: #FFC0CB; /*on change la couleur du bloc*/
+  margin:auto;
+} 
+#haut 		{height: auto; padding-top: 20px;}
+#menu 		{background-color:#FFC0CB; width:980px; text-align:center; height:50px; line-height:30px; border-radius:20px 20px 0px 0px; -moz-border-radius:20px 20px 0 0;-webkit-border-radius:20px 20px 0 0;}
+#menu li 	{list-style-type: none; display:inline-block;}
+#menu li a  {text-decoration: none; color:#222; transition: all .5s ease-in;-moz-transition: all .5s ease-in;-webkit-transition: all .5s ease-in; /*all permet de dire que toutes la case s'anime*/
+  background-color: #fff; padding: 10px}/*jouer une animation lente au début puis de plus en plus rapide sur la fin*/ 
+#menu li a:hover {color:#fff; background-color: #7a7572; padding:15px; margin-left:10px;}
+ul 			{margin:0; padding:0;}
+
+/*contenu*/
+
+#contenu 	{width:880px; background-color:#FFC0CB; padding:50px;}
+#contenu p  {color:#FFC0CB; line-height:20px; margin-bottom:20px; font-size:15px;padding:2px;font-family:Merriweather;}
+#contenu h1 {margin-bottom:20px; height:40px;font-family: Merriweather; font-size: 50px;padding-left:10px; line-height:30px;transition: all .5s ease-in;-moz-transition: all .5s ease-in;-webkit-transition: all .5s ease-in} /*L'icône fait 30px donc avec l'icône on peut faire un padding qui va permettre de décaler le texte par rapport à l'icône sur la gauche */
+
+
+
+
+legend{
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 10px;
+  color: white;} /*changer la couleur de la légende*/
+
+
+
+input[type="submit"]{
+  float: right;
+  padding: 20px;
+  line-height: 5px;
+  font-size: 16px;
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #fe6921;
+  border-radius: 5px;}
+
+input[type="submit"]:hover{
+  box-shadow: 0px 0px 3px #555;
+  background-color: #e8ab2e;}
+
+
+/*footer*/
+#pdp 		{width: 940px; background-color: #222; float: left; height: auto; padding:20px; color:#fff; font-size:15px; text-align: center;
+  border-radius: 0 0 20px 20px; -webkit-border-radius: 0 0 20px 20px; -moz-border-radius: 0 0 20px 20px;}
+
