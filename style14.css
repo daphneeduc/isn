@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/*CSS Document*/
+
+body {
+	margin:10px;
+	background: url(blind.jpg) no-repeat center fixed;/*ne pas reproduire l'image 
+	plusieurs fois et la centrer*/
+	-webkit-background-size:cover; /*permet d'être compatible sur safari, chrome et
+	 mozilla afin de pouvoir adapter la taille de l'image en fonction de la taille 
+	 de la fenêtre*/
+	-moz-background-size:cover;) }
+h1 {color:#222;margin:0;padding:0;}
+h3 {color: #e2e2e2;}
+p {color: #e2e2e2;margin:0;padding:0;}
+/*header*/
+
+.imagehaut {
+top:10px;
+right:10px;
+background-position: right bottom;
+position: absolute;
+}
+
+#conteneur { /*le # est utilisé pour symboliser le ID*/
+	width: 980px; /*correspond à la largeur du bloc */
+	background-color: #ccc; /*on change la couleur du bloc*/
+	margin:auto;
+	} 
+#haut 		{height: auto; padding-top: 20px;}
+#menu 		{background-color:#ccc ; width:980px; text-align:center; height:50px; 
+	line-height:30px; border-radius:20px 20px 0px 0px; -moz-border-radius:20px 20px 0 0;
+	-webkit-border-radius:20px 20px 0 0;}
+#menu li 	{list-style-type: none; display:inline-block;}
+#menu li a  {text-decoration: none; color:#222; transition: all .5s ease-in;
+	-moz-transition: all .5s ease-in;-webkit-transition: all .5s ease-in; /*all permet de 
+	dire que toutes la case s'anime*/
+	background-color: #fff; padding: 10px}/*jouer une animation lente au début puis de plus 
+	en plus rapide sur la fin*/ 
+#menu li a:hover {color:#fff; background-color: #00BFFF; padding:15px; margin-left:10px;}
+ul 			{margin:0; pading:0;}
+
+/*contenu*/
+
+#contenu 	{width:200px; background-color:#ececec; padding:30px; float: left;margin: 40px;
+	margin-right:30px;border-radius: 20px 20px 20px 20px;}
+#contenu p  {color:#222; font-size:15px; line-height:18px; margin-bottom:30px;margin: 15px;}
+
+#contenu1 	{width:200px; background-color:#ececec; padding:30px; float: left;margin: 40px;
+	margin-right:30px;border-radius: 20px 20px 20px 20px;}
+#contenu1 p  {color:#222; font-size:15px; line-height:18px; margin-bottom:10px;margin: 15px;}
+#contenu1 h1 {margin-bottom:35px; background:url(bag.svg) no-repeat; height:30px;padding-left:40px;
+ font-size: 20px; line-height:30px;transition: all .5s ease-in;-moz-transition: all .5s ease-in;
+ -webkit-transition: all .5s ease-in} /*L'icône fait 30px donc avec l'icône on peut faire un padding 
+ qui va permettre de décaler le texte par rapport à l'icône sur la gauche */
+/* line-height correspond à l'interligne et donc permet de centrer le texte avec l'image*/
+#contenu1 h1:hover {background:url(bag.svg) 15px 0 no-repeat;}
+
+#contenu2 	{width:200px; background-color:#ececec; padding:30px; float: left;margin: 40px;
+	margin-right: 20px;border-radius: 20px 20px 20px 20px;}
+#contenu2 p  {color:#222; font-size:15px; line-height:18px; margin-bottom:30px;margin: 15px;}
+
+/*footer*/
+#pdp 		{width: 940px; background-color: #222; float: left; height: auto; padding:20px; color:#fff;
+ font-size:15px; text-align: center;
+border-radius: 0 0 20px 20px; -webkit-border-radius: 0 0 20px 20px; -moz-border-radius: 0 0 20px 20px;}
