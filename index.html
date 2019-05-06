@@ -1,198 +1,70 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="panier.css"> <!-- Fait le lien avec la page de style -->
-    <meta charset="utf-8"> <!-- encodage -->
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Gère l'affichage de la page sur un appareil-->
-    <script src="panier.js"></script>
-    <center><a href="accueil.html"><img src="logo2.jpg" alt= "logo" width="550"></a></center>
-    <!-- Afficher le logo et faire avec lien retour ) l'accueil -->
-    <!-- Affiche le nom de la page dans l'onglet -->
-    <title>JDA Shoes E-SHOP | Boutique</title>
+<html lang="fr"> <!-- indiquer au navigateur la langue utilisée et qu'il s'agit d'un 
+fichier HTML-->
+<head>
+<meta charset="UTF-8"> <!-- indiquer au navigateur l'encodage utilisé-->
+<link href="style14.css" rel="stylesheet" type="text/css"> <!-- relier le fichier CSS
+au fichier HTML-->
+<center><a href="accueil.html"><img src="logo2.jpg" alt= "logo" width="550"></a></center>
+<!-- lorsque l'on clique sur le logo on est automatiquement ramené à la page d'accueil-->
+<title>JDA Shoes Stores</title><!-- on indique le titre dans l'onglet-->
 </head>
-  <body>
-    <div class="imagehaut">   <!-- Logo pour changer la lange avec un lien à la page traduite -->
-      <a href="cart.html"><img src="anglais.jpg" alt="drapeau Anglais" width="45"></a>
-    </div>
-    <center><nav>  <!-- Liste de toutes les autres pages -->
-      <span><a href="accueil.html">ACCUEIL |</a></span>
-      <span><a href="nos_produits.html">NOS PRODUITS |</a></span>
-      <span><a href="index.html">NOTRE BOUTIQUE |</a></span>
-      <span><a href="inscription.html">INSCRIPTION </a></span>
-      </nav></center>
-    <br>
-    <br>
-    <section class="container content-section">  
-      <!-- On crée une divison que l'on utilisera dans pour le CSS et pour oganiser le code -->
-        <h2 class="section-header">NOTRE BOUTIQUE</h2>
-            <div class="shop-items">
-                <div class="shop-item">
-                    <span class="shop-item-title">Chaussures pour malvoyants blanches</span>
-                    <img class="shop-item-image" src="chaussureblanche.jpg">  <!-- Insertion de l'image de l'article -->
-                    <div class="shop-item-details">
-                      <span class="shop-item-price">85.99 €</span>
-                        <div class="shop-item-size">
-                          <select id="shop-item-size"> <!-- Menu déroulant pour choisir la pointure -->
-                            <option value="0">Taille</option>
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                            <option value="46">46</option>
-                          </select>
-                        </div>
-                        <button class="btn btn-primary shop-item-button" type="button">AJOUTER AU PANIER</button>
-                    </div>
-              </div>
-                <div class="shop-item">
-                    <span class="shop-item-title">Chaussures pour malvoyants roses</span>
-                    <img class="shop-item-image" src="chaussurerose.jpg">
-                    <div class="shop-item-details">
-                      <span class="shop-item-price">85.99 €</span>
-                        <div class="shop-item-size">
-                          <select id="shop-item-size">
-                            <option value="0">Taille</option>
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                            <option value="46">46</option>
-                          </select>
-                        </div>
-                        <button class="btn btn-primary shop-item-button" type="button">AJOUTER AU PANIER</button>
-                      </div>
-                    </div>
-                    <div class="shop-item">
-                      <span class="shop-item-title">Chaussures pour malvoyants rouges</span>
-                      <img class="shop-item-image" src="chaussurerouge.jpg">
-                      <div class="shop-item-details">
-                        <span class="shop-item-price">85.99 €</span>
-                        <div class="shop-item-size">
-                          <select id="shop-item-size">
-                            <option value="0">Taille</option>
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                            <option value="46">46</option>
-                          </select>
-                        </div>
-                        <button class="btn btn-primary shop-item-button" type="button">AJOUTER AU PANIER</button>
-                      </div>
-                    </div>
-                    <div class="shop-item">
-                      <span class="shop-item-title">Chaussures pour malvoyants grises</span>
-                      <img class="shop-item-image" src="chaussuregrise.jpg">
-                      <div class="shop-item-details">
-                        <span class="shop-item-price">85.99 €</span>
-                          <div class="shop-item-size">
-                            <select id="shop-item-size">
-                        <option value="0">Taille</option>
-                        <option value="36">36</option>
-                        <option value="37">37</option>
-                        <option value="38">38</option>
-                        <option value="39">39</option>
-                        <option value="40">40</option>
-                        <option value="41">41</option>
-                        <option value="42">42</option>
-                        <option value="43">43</option>
-                        <option value="44">44</option>
-                        <option value="45">45</option>
-                        <option value="46">46</option>
-                      </select>
-                    </div>
-                    <button class="btn btn-primary shop-item-button" type="button">AJOUTER AU PANIER</button>
-                  </div>
-                </div>
-                  <div class="shop-item">
-                    <span class="shop-item-title">Chaussures pour malvoyants noires</span>
-                    <img class="shop-item-image" src="chaussurenoire.jpg">
-                    <div class="shop-item-details">
-                      <span class="shop-item-price">85.99 €</span>
-                        <div class="shop-item-size">
-                          <select id="shop-item-size">
-                            <option value="0">Taille</option>
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                            <option value="46">46</option>
-                          </select>
-                        </div>
-                        <button class="btn btn-primary shop-item-button" type="button">AJOUTER AU PANIER</button>
-                      </div>
-                    </div>
-                  <div class="shop-item">
-                    <span class="shop-item-title">Lunettes pour malvoyants</span>
-                    <img class="shop-item-image" src="lunettes.png">
-                    <div class="shop-item-details">
-                      <span class="shop-item-price">65.99 €</span><div class="shop-item-size">
-                        <select id="shop-item-size">
-                          <option value="0">Taille</option>
-                          <option value="Taille unique">Taille unique</option>
-                        </select>
-                      </div>
-                      <button class="btn btn-primary shop-item-button"type="button">AJOUTER AU PANIER</button>
-                    </div>
-                  </div>
-              </div>
-</section>
-<section class="container content-section">
-<h2 class="section-header">MON PANIER</h2>
-<div class="cart-row">   <!-- On crée les noms des différentes colones du panier -->
-    <span class="cart-item cart-header cart-column">PRODUITS</span>
-    <span class="cart-size cart-header cart-column">TAILLE</span>
-    <span class="cart-price cart-header cart-column">PRIX</span>
-    <span class="cart-quantity cart-header cart-column">QUANTITÉ</span>
+<body>
+
+<div class="imagehaut"> <!-- permet de pouvoir passer la page en anglais-->
+      <a href="home.html"><img src="anglais.jpg" alt="drapeau Anglais" width="45"></a>
 </div>
-<div class="cart-items">
+
+<div id="conteneur"> <!-- définir le menu avec les différents onglets, lorsque l'on 
+	clique sur l'un d'entre eux on est automatiquement renvoyé à la page correspondante-->
+	<header id="haut">
+		<nav id="menu">
+			<ul>
+				<li><a href="accueil.html">ACCUEIL</a> |</li> 
+				<li><a href="nos_produits.html">NOS PRODUITS</a> |</li>
+				<li><a href="index.html">NOTRE BOUTIQUE</a> |</li>
+				<li><a href="Inscription.html">CREER UN COMPTE</a></li>
+			</ul>
+		</nav>
+	</header>
+
+<!-- début de contenu-->
+	<section id="contenu">
+		<article>
+			<center><h1>Notre catalogue</h1></center></br></br>
+			<center><a href="nos_produits.html"><img src="catalogue.png" alt= "logo" width="50"></a></center></br>
+			<center><p>Consulter notre large évantail de modèles pour notre dispositif pour personnes 
+			atteinte de déficience visuelles.</p></center>
+		</article>
+	</section>
+
+	<section id="contenu1">
+		<article>
+			<h1>Notre boutique</h1>
+			<center><a href="index.html"><img src="panier.png" alt= "logo" width="50"></a></center>
+			<center><p>Particulier ou professionnels accédez à notre boutique en ligne.</p></center>
+		</article>
+	</section>
+
+	<section id="contenu2">
+		<article>
+			<center><h1>Créer un compte</h1></center></br></br>
+			<center><a href="Inscription.html"><img src="connexion.png" alt= "logo" width="50"></a></center>
+			<center><p>Devenez un client privilégié ! Rejoignez nous en créant un compte !</p></center>
+		</article>
+	</section>
+<!-- fin de contenu-->
+	<!-- début footer-->
+<footer id="pdp">
+     
+	<div id='contact'>
 </div>
-<div class="cart-total">
-    <strong class="cart-total-title">Total</strong>
-    <span class="cart-total-price">0 €</span>
+<center><p><strong>Contactez-nous</strong></p></center>
+  <center><p><strong>email</strong>: jdashoes.contact@gmail.com |
+     <strong>tel</strong>: 03 85 67 87 01 |
+     <strong>adresse</strong>: 49 rue de Gourdon, Montceau-les-Mines, 71300 </p></center>
+	</footer>
+<!-- fin de footer-->
 </div>
-<button class="btn btn-primary btn-purchase" type="button">ACHETER</button>
-</section>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div id='contact'><!-- Division pour la partie "contact" -->
-    </div>
-    <center><p><strong>Contactez-nous</strong></p></center>
-    <center><p><strong>email</strong>: jdashoes.contact@gmail.com |
-      <strong>tel</strong>: 03 85 67 87 01 |
-      <strong>adresse</strong>: 49 rue de Gourdon, Montceau-les-Mines, 71300 </p></center>
-  </body>
+</body>
 </html>
